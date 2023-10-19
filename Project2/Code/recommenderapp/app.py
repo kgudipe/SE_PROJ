@@ -4,6 +4,7 @@ import json
 import sys
 import csv
 import time
+import pandas as pd
 
 sys.path.append("../../")
 from Code.prediction_scripts.item_based import recommendForNewUser
@@ -60,6 +61,31 @@ def feedback():
 @app.route("/success")
 def success():
     return render_template("success.html")
+
+@app.route('/genrePage.html')
+def genre_page():
+    genre = request.args.get('Genre', default="Action", type=str)
+
+     # Pagination
+    page = request.args.get('page', default=1, type=int)
+    per_page = 30
+    start_from = (page - 1) * per_page
+    end_on = start_from + per_page
+    
+    # Load the dataset
+    df = pd.read_csv('../../data/MovieGenre.csv', encoding='ISO-8859-1')
+
+    df['Year'] = df['Title'].str.extract(r'\((\d{4})\)').astype(float)
+
+    # Filter the movies based on the genre
+    filtered_movies = df[df['Genre'].str.contains(genre, case=False, na=False)]
+
+    sorted_movies = filtered_movies.sort_values(by="Year", ascending=False)
+
+    paginated_movies = sorted_movies.iloc[start_from:end_on]
+    
+    return render_template('genrePage.html', movies=paginated_movies.to_dict(orient='records'), genre=genre, current_page=page, total_pages=(len(filtered_movies) // per_page) + 1)
+
 
 if __name__ == "__main__":
     app.run(port=5001, debug=True)

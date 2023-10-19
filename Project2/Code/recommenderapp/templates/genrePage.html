@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title></title>
+    <title>{{ genre }} Movies</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,6 +24,23 @@
         height: 80px;
 
 
+    }
+
+    .data {
+        background-color: rgba(0, 0, 0, 0.7);
+        /* White with 80% opacity */
+        z-index: 10;
+        padding: 20px 20px 20px 20px;
+        min-height: 100vh;
+        /* Total height - navbar height - navbar padding - content margin-top */
+        position: relative;
+
+    }
+
+    .pagination-center {
+        text-align: center;
+        margin-top: 20px;
+        /* Adjust as needed for space above pagination */
     }
 
     .navbar-default .navbar-nav>li>a {
@@ -116,6 +133,66 @@
 
     </div><!-- /.container-fluid -->
     </nav>
+    </div>
+
+    <div class="data">
+        <h1 style="color: white; text-align: center;">{{ genre }} Movies</h1>
+        <br>
+        <h3 style="color: white; text-align: center;">Can't decide? Use the Movie <a href="/">Movie Recommender</a></h3>
+        <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px;">
+
+            {% for movie in movies %}
+            <div style=" padding: 10px; border-radius: 5px;">
+                <!-- Display the movie image -->
+                <img src="{{ movie.Poster }}" alt="{{ movie.Title }}"
+                    style="width: 60%; max-height: 300px; object-fit: cover; border: 1px solid white;">
+
+                <p style="color: white;">{{ movie.Title }}</p>
+            </div>
+            {% endfor %}
+
+        </div class="pagination-center">
+
+        <ul class="pagination" style="display: inline-block; padding-left: 38%;">
+
+            {# Previous button #}
+            {% if current_page > 1 %}
+            <li><a href="{{ url_for('genre_page', Genre=genre, page=current_page-1) }}">Previous</a></li>
+            {% else %}
+            <li class="disabled"><a href="#">Previous</a></li>
+            {% endif %}
+
+            {# Display first few page numbers #}
+            {% for page_num in range(1, 5) %}
+            {% if page_num == current_page %}
+            <li class="active"><a href="#">{{ page_num }}</a></li>
+            {% else %}
+            <li><a href="{{ url_for('genre_page', Genre=genre, page=page_num) }}">{{ page_num }}</a></li>
+            {% endif %}
+            {% endfor %}
+
+            {# Ellipsis - Display if current page is greater than the first four and less than the last three pages #}
+
+            <li class="disabled"><a href="#">...</a></li>
+
+
+            {# Display last few page numbers #}
+            {% for page_num in range(total_pages-2, total_pages+1) %}
+            {% if current_page == page_num %}
+            <li class="active"><a href="#">{{ page_num }}</a></li>
+            {% else %}
+            <li><a href="{{ url_for('genre_page', Genre=genre, page=page_num) }}">{{ page_num }}</a></li>
+            {% endif %}
+            {% endfor %}
+
+            {# Next button #}
+            {% if current_page < total_pages %} <li><a
+                    href="{{ url_for('genre_page', Genre=genre, page=current_page+1) }}">Next</a></li>
+                {% else %}
+                <li class="disabled"><a href="#">Next</a></li>
+                {% endif %}
+
+        </ul>
     </div>
 
 </body>
