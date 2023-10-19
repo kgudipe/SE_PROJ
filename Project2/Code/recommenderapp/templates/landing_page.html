@@ -156,41 +156,45 @@ style="background-image: url('https://wallpapers.com/images/hd/movie-poster-back
             <button id="showContentButton">Start Now</button>
         </div>
         <div class="innerContent" style="display: none;">
-            <div style="width: 600px; margin: auto;">
-                <h2>Please select movies for training</h2>
-                <p style="width: 560px; margin: auto;">
-                    <label>Search Here</label>&nbsp;&nbsp;<input type="text" name="search" id="searchBox" />
-                </p>
-            </div>
-            <div style="width: 600px; margin: auto;">
-                <h2>Selected movies : </h2>
-                <ul id="selectedMovies">
-        
-                </ul>
-            </div>
-            <div style="width: 600px; margin: auto;">
-                <input type="button" class="btn btn-primary" name="predict" id="predict" value="Predict">
-            
-            </div>
-            <div style="width: 600px; margin: auto;">
-                <h2>Predicted Movies</h2>
-                <form class="recos" id="recos">
-                    <ul id="predictedMovies">
-                        
+            <div class="">
+                <div style="width: 600px; margin: auto;">
+                    <h2 style="color: white; text-align: center;">Please select movies for training</h2>
+                    <p style="width: 560px; margin: auto; text-align: center;">
+                        <label style="color: white;">Search Here</label>&nbsp;&nbsp;<input type="text" name="search"
+                            id="searchBox" />
+                    </p>
+                </div>
+                <div style="width: 600px; margin: auto;">
+                    <h2 style="color: white; text-align: center;">Selected movies : </h2>
+                    <ul id="selectedMovies" style="color: white; text-align: center;">
+
                     </ul>
-                </form>
-                
+                </div>
+                <div style="width: 600px; margin: auto;align-items: center;">
+                    <input type="button" class="btn btn-primary" name="predict" id="predict" value="Predict">
+
+                </div>
+                <div style="width: 600px; margin: auto;">
+                    <h2 style="color: white; text-align: center;">Predicted Movies</h2>
+                    <form class="recos" id="recos">
+                        <ul id="predictedMovies" style="color: white; text-align: center;">
+
+                        </ul>
+                    </form>
+
+                </div>
+                <div style="width: 600px; margin: auto;">
+                    <input type="button" class="btn btn-info" name="feedback" id="feedback" value="Give Feedback">
+
+                </div>
+                <div id="dataCollected" style="width: 600px; margin: auto; display: none;">
+                    <h1 style="color: white; text-align: center;">Thanks!! Your response was stored.
+                    </h1>
+                    <input type="button" id="refreshPage" class="btn btn-danger" name="refreshPage"
+                        value="Take another attempt">
+                </div>
+                <br /><br /><br />
             </div>
-            <div style="width: 600px; margin: auto;">
-                <input type="button" class="btn btn-info" name="feedback" id="feedback" value="Give Feedback">
-            
-            </div>
-            <div id="dataCollected" style="width: 600px; margin: auto; display: none;">
-                <h1>Thanks!! Your response was stored.
-                </h1>
-                <input type="button" id="refreshPage" class="btn btn-danger" name="refreshPage" value="Take another attempt">
-            </div>
-            <br/><br/><br/>
         </div>
         </div>
         
