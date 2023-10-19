@@ -12,7 +12,110 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
+<style>
+    .navbar {
+        position: relative;
+        /* or you can use 'fixed' if you want the navbar to be fixed on scroll */
+        z-index: 1000;
+        /* Higher z-index will ensure navbar is above other content */
+        background-color: rgba(0, 0, 0, 0.7);
+        /* Black with 70% opacity */
+        margin-bottom: 0;
+        /* Reset default Bootstrap margin */
+        height: 80px;
+
+    }
+
+    .navbar-default .navbar-nav>li>a {
+        color: white;
+        /* Adjust the text color as needed */
+    }
+
+    .navbar-default .navbar-nav>.dropdown>.dropdown-menu {
+        background-color: rgba(0, 0, 0, 0.7);
+        border: none;
+    }
+
+    .navbar-default .navbar-nav>.dropdown>.dropdown-menu>li>a {
+        color: white;
+        /* Adjust the dropdown text color as needed */
+    }
+
+    .navbar-default .navbar-nav .dropdown .dropdown-menu>li>a:hover {
+        background-color: rgb(255, 81, 0);
+        /* or any color you prefer for background when hovered */
+        color: #fff;
+        /* or any color you prefer for text when hovered */
+    }
+
+    .navbar-default .navbar-nav .dropdown .dropdown-menu>li>a:active {
+        background-color: rgb(255, 81, 0);
+        /* or any color you prefer for background when active */
+        color: #fff;
+        /* or any color you prefer for text when active */
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: none;
+        /* Hidden by default */
+        position: absolute;
+        /* Position it relative to the .dropdown parent */
+        top: 100%;
+        /* Right below the dropdown link */
+        left: 0;
+    }
+
+    .dropdown-hover {
+        text-decoration: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+
 <body>
+    <div class="navbar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-center">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/">
+                            <img alt="Brand" src="../static/Movie_Recommender1.png">
+                        </a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/" style="color: white;">Movie Recommender</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-hover" role="button" aria-haspopup="true"
+                                    aria-expanded="false" style="color: white;">Top Genres <span
+                                        class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="genrePage.html?Genre=Action">Action</a></li>
+                                        <li><a href="genrePage.html?Genre=Comedy">Comedy</a></li>
+                                        <li><a href="genrePage.html?Genre=Thriller">Thriller</a></li>
+                                        <li><a href="genrePage.html?Genre=Adventure">Adventure</a></li>
+                                        <li><a href="genrePage.html?Genre=Romance">Romance</a></li>
+                                        <li><a href="genrePage.html?Genre=Crime">Crime</a></li>
+                                        <li><a href="genrePage.html?Genre=Sci-Fi">Science Fiction</a></li>
+                                        <li><a href="genrePage.html?Genre=Fantasy">Fantasy</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div>
+
+            </div>
+
+    </div><!-- /.container-fluid -->
+    </nav>
+</div>
     <br/><br/>
     <div id="dataCollected" style="width: 600px; margin: auto;">
         <h1>Thanks!! Your response was stored.
