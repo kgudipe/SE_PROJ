@@ -69,14 +69,15 @@ def genre_page():
     # Load the dataset
     df = pd.read_csv('../../data/MovieGenre.csv', encoding='ISO-8859-1')
 
-
-    #df = df.rename(columns={'Movie Poster': 'movie_poster'})
+    df['Year'] = df['Title'].str.extract(r'\((\d{4})\)').astype(float)
 
     # Filter the movies based on the genre
     filtered_movies = df[df['Genre'].str.contains(genre, case=False, na=False)]
 
+    sorted_movies = filtered_movies.sort_values(by="Year", ascending=False)
+
     
-    return render_template('genrePage.html', movies=filtered_movies.to_dict(orient='records'), genre=genre)
+    return render_template('genrePage.html', movies=sorted_movies.to_dict(orient='records'), genre=genre)
 
 
 if __name__ == "__main__":
