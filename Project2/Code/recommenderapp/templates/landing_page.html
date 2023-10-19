@@ -267,10 +267,30 @@ style="background-image: url('https://wallpapers.com/images/hd/movie-poster-back
                 },
                 select: function (event, ui) {
                     var ulList = $('#selectedMovies');
-                    var li = $('<li/>').text(ui.item.value).appendTo(ulList);
-                    $('#searchBox').val("");
-                    return false;
-                },
+            
+            // Create a new list item
+            var li = $('<li/>');
+            
+            // Add the movie title
+            $('<span/>').text(ui.item.value).appendTo(li);
+            
+            // Add the "x" button for removal
+            $('<button/>').text('x').css({
+                marginLeft: '10px',
+                background: 'red',
+                color: 'white',
+                border: 'none',
+                cursor: 'pointer'
+            }).on('click', function() {
+                li.remove();
+            }).appendTo(li);
+            
+            // Append the list item to the ul
+            li.appendTo(ulList);
+
+            $('#searchBox').val("");
+            return false;
+            },
                 minLength: 2
             });
         });
