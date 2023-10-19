@@ -2,8 +2,6 @@
     A collaborative filtering based recommendation engine!
 
 
-[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/ssp4all/)
-
 
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://gitHub.com/kgudipe/SE_PROJ/graphs/commit-activity) [![Contributors Activity](https://img.shields.io/github/commit-activity/m/kgudipe/SE_PROJ)](https://github.com/kgudipe/SE_PROJ/pulse)[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4127507.svg)](https://doi.org/10.5281/zenodo.4127507) [![Build Status](https://travis-ci.com/git-ankit/MovieRecommender.svg?branch=master)](https://travis-ci.com/git-ankit/MovieRecommender) [![codecov](https://codecov.io/gh/git-ankit/MovieRecommender/branch/master/graph/badge.svg?token=8K0VL8106C)](undefined) [![GitHub release](https://img.shields.io/github/release/kgudipe/SE_PROJ.svg)](https://GitHub.com/kgudipe/SE_PROJreleases/) [![black](https://img.shields.io/badge/StyleChecker-black-purple.svg)](https://pypi.org/project/black/) 
