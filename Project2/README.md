@@ -30,8 +30,7 @@ Make sure you taste your own medicine first and take into account other peoples 
 
 
 ### Working 📱
-![Demo](https://raw.githubusercontent.com/git-ankit/MovieRecommender/master/asset/demo.gif)
-
+<a  href="https://www.youtube.com/watch?v=MwQxNfARMio&ab_channel=KoushikGudipelly"><img height=150 width=500 alt="logo here" src=""/></a>
 
 
 
