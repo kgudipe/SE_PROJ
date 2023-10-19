@@ -25,6 +25,56 @@
         height: 80px;
 
     }
+
+    .navbar-default .navbar-nav>li>a {
+        color: white;
+        /* Adjust the text color as needed */
+    }
+
+    .navbar-default .navbar-nav>.dropdown>.dropdown-menu {
+        background-color: rgba(0, 0, 0, 0.7);
+        border: none;
+    }
+
+    .navbar-default .navbar-nav>.dropdown>.dropdown-menu>li>a {
+        color: white;
+        /* Adjust the dropdown text color as needed */
+    }
+
+    .navbar-default .navbar-nav .dropdown .dropdown-menu>li>a:hover {
+        background-color: rgb(255, 81, 0);
+        /* or any color you prefer for background when hovered */
+        color: #fff;
+        /* or any color you prefer for text when hovered */
+    }
+
+    .navbar-default .navbar-nav .dropdown .dropdown-menu>li>a:active {
+        background-color: rgb(255, 81, 0);
+        /* or any color you prefer for background when active */
+        color: #fff;
+        /* or any color you prefer for text when active */
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: none;
+        /* Hidden by default */
+        position: absolute;
+        /* Position it relative to the .dropdown parent */
+        top: 100%;
+        /* Right below the dropdown link */
+        left: 0;
+    }
+
+    .dropdown-hover {
+        text-decoration: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
 </style>
 
 <body>
