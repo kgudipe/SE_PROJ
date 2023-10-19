@@ -1,4 +1,4 @@
 - name: Upload coverage reports to Codecov
   uses: codecov/codecov-action@v3
   env:
-    CODECOV_TOKEN: ${{ secrets.015425fd-d3fb-436e-a007-aae7e1a3eb90 }}
+    CODECOV_TOKEN: 015425fd-d3fb-436e-a007-aae7e1a3eb90
