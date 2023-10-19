@@ -65,6 +65,12 @@ def success():
 @app.route('/genrePage.html')
 def genre_page():
     genre = request.args.get('Genre', default="Action", type=str)
+
+     # Pagination
+    page = request.args.get('page', default=1, type=int)
+    per_page = 30
+    start_from = (page - 1) * per_page
+    end_on = start_from + per_page
     
     # Load the dataset
     df = pd.read_csv('../../data/MovieGenre.csv', encoding='ISO-8859-1')
@@ -76,8 +82,9 @@ def genre_page():
 
     sorted_movies = filtered_movies.sort_values(by="Year", ascending=False)
 
+    paginated_movies = sorted_movies.iloc[start_from:end_on]
     
-    return render_template('genrePage.html', movies=sorted_movies.to_dict(orient='records'), genre=genre)
+    return render_template('genrePage.html', movies=paginated_movies.to_dict(orient='records'), genre=genre, current_page=page, total_pages=(len(filtered_movies) // per_page) + 1)
 
 
 if __name__ == "__main__":
