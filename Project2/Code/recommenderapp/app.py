@@ -4,6 +4,7 @@ import json
 import sys
 import csv
 import time
+import pandas as pd
 
 sys.path.append("../../")
 from Code.prediction_scripts.item_based import recommendForNewUser
@@ -60,6 +61,23 @@ def feedback():
 @app.route("/success")
 def success():
     return render_template("success.html")
+
+@app.route('/genrePage.html')
+def genre_page():
+    genre = request.args.get('Genre', default="Action", type=str)
+    
+    # Load the dataset
+    df = pd.read_csv('../../data/MovieGenre.csv', encoding='ISO-8859-1')
+
+
+    #df = df.rename(columns={'Movie Poster': 'movie_poster'})
+
+    # Filter the movies based on the genre
+    filtered_movies = df[df['Genre'].str.contains(genre, case=False, na=False)]
+
+    
+    return render_template('genrePage.html', movies=filtered_movies.to_dict(orient='records'), genre=genre)
+
 
 if __name__ == "__main__":
     app.run(port=5001, debug=True)

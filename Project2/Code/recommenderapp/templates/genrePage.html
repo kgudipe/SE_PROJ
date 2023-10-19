@@ -118,6 +118,25 @@
     </nav>
     </div>
 
+    <div class="data">
+        <h1 style="color: white; text-align: center;">{{ genre }} Movies</h1>
+        <br>
+        <h3 style="color: white; text-align: center;">Can't decide? Use the Movie <a href="/">Movie Recommender</a></h3>
+        <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px;">
+
+            {% for movie in movies %}
+            <div style=" padding: 10px; border-radius: 5px;">
+                <!-- Display the movie image -->
+                <img src="{{ movie.Poster }}" alt="{{ movie.Title }}"
+                    style="width: 60%; max-height: 300px; object-fit: cover; border: 1px solid white;">
+
+                <p style="color: white;">{{ movie.Title }}</p>
+            </div>
+            {% endfor %}
+
+        </div class="pagination-center">
+    </div>
+
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" crossorigin="anonymous"></script>
