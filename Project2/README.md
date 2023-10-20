@@ -91,6 +91,8 @@ Optimized Genre Processing:
 Transitioned from sequential genre processing to vectorized operations using pandas.
 Achieved a significant 50% speedup in genre processing times.
 
+### Rubric
+Refer to Rubric.md file [here](https://github.com/kgudipe/SE_PROJ/blob/main/Project2/Rubrics.md)
 
 ### Documentation 📚
 Refer to Wiki page [here](https://github.com/git-ankit/MovieRecommender/wiki/Documentation)
