@@ -36,7 +36,7 @@ Project Name: Movie Recommender
 |Evidence that the members of the team are working across multiple places in the code base|3|<p>[CheckCommits](https://github.com/kgudipe/SE_PROJ/commits/main)</p><p></p>|
 |Short release cycles|3|[Graphs](https://github.com/kgudipe/SE_PROJ/graphs/contributors)|
 |Q1 - What your software does|||
-|1\.1) Does your website and documentation provide a clear, high-level overview of your software?|<p>                 </p><p>`                         `YES</p>||
+|1\.1) Does your website and documentation provide a clear, high-level overview of your software?|<p>                             YES</p>||
 |1\.2) Does your website and documentation clearly describe the type of user who should use your software?|<p>**           </p><p>`                         `YES</p>||
 |1\.3) Do you publish case studies to show how your software has been used by yourself and others?|<p></p><p>**                         NO</p>||
 |Q2 - Your project's and software's identity|||
