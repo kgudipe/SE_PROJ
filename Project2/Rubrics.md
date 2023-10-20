@@ -3,7 +3,7 @@ Project id: R
 Project Name: Movie Recommender
 
 
-|Notes|Marks/Points(0-3)|Evidence|
+|Notes|Marks/Points(0-3)(Total-89)|Evidence|
 | :- | :- | :- |
 |Video|3|<p></p><p>[Youtube Link](https://www.youtube.com/watch?v=MwQxNfARMio&ab_channel=KoushikGudipelly)</p>|
 |Workload is spread over the whole team (one team member is often X times more productive than the others...|3|[Collaborators Commits Link](https://github.com/kgudipe/SE_PROJ/commits/main)|
