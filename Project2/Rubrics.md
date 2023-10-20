@@ -9,7 +9,7 @@ Project Name: Movie Recommender
 |Workload is spread over the whole team (one team member is often X times more productive than the others...|3|[Collaborators Commits Link](https://github.com/kgudipe/SE_PROJ/commits/main)|
 |But nevertheless, here is a track record that everyone is contributing a lot)|3|[Collaborators Commits Link](https://github.com/kgudipe/SE_PROJ/commits/main)|
 |Number of commits|3|84 commits<br>in GH|
-|Number of commits: by different people|3|<p>kgudipe - 33</p><p>achitti2812 - 10</p><p>saisanthoshgarlapati – 11</p><p>Rithwik - 7</p><p></p><p>Command: git shortlog -s -n</p>|
+|Number of commits: by different people|3|<p>kgudipe - 33</p><p>achitti2812 - 28</p><p>saisanthoshgarlapati – 11</p><p>Rithwik - 7</p><p></p><p>Command: git shortlog -s -n</p>|
 |Issues reports: there are many|3|<p>0</p><p>[Open Issues](https://github.com/kgudipe/SE_PROJ/issues?q=is%3Aopen+is%3Aissue)</p>|
 |Issues are being closed|3|<p>5</p><p></p><p>[Closed Issues](https://github.com/kgudipe/SE_PROJ/issues?q=is%3Aissue+is%3Aclosed)</p>|
 |DOI badge: exists|3|[ReadMe](https://github.com/kgudipe/SE_PROJ/blob/main/Project2/README.md)|
