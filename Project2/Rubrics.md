@@ -90,7 +90,7 @@ Project Name: Movie Recommender
 |<p>11\.7) Can you download dependencies using a dependency management tool or package manager?\*</p><p>e.g. Ivy (<http://ant.apache.org/ivy/>), Maven (<https://maven.apache.org/>), Python pip (<https://pypi.python.org/pypi/pip>) or setuptools (<https://pypi.python.org/pypi/setuptools>), PHP Composer (<https://getcomposer.org/>), Ruby gems ([https://rubygems.org](https://rubygems.org/)), or R PackRat (<https://rstudio.github.io/packrat/>)</p><p></p>|YES|<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>|
 |11\.8) Do you have tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful?|YES||
 |Q12 - How you test your software|||
-|12\.1) Do you have an automated test suite for your software?|NO||
+|12\.1) Do you have an automated test suite for your software?|YES||
 |12\.2) Do you have a framework to periodically (e.g. nightly) run your tests on the latest version of the source code?|NO||
 |12\.3) Do you use continuous integration, automatically running tests whenever changes are made to your source code?|NO||
 |12\.4) Are your test results publicly visible?|NO||
