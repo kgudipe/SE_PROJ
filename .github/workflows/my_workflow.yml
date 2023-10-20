@@ -1,4 +1,33 @@
-- name: Upload coverage reports to Codecov
-  uses: codecov/codecov-action@v3
-  env:
-    CODECOV_TOKEN: 015425fd-d3fb-436e-a007-aae7e1a3eb90
+name: Run Python Tests
+
+on:
+  push:
+    branches:
+      - main # or master, if that's your default branch
+  pull_request:
+    branches:
+      - main # or master
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x' # Use the version that suits your project
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        # Add any other dependencies you need to install for your tests to run
+
+    - name: Run tests.py
+      run: python tests.py
+
+    - name: Run test_search.py
+      run: python test_search.py
