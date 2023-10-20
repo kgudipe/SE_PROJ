@@ -120,7 +120,7 @@ Project Name: Movie Recommender
 |Q16 - Your plans for the future|||
 |16\.1) Does your website or documentation include a project roadmap (a list of project and development milestones for the next 3, 6 and 12 months)?|No||
 |16\.2) Does your website or documentation describe how your project is funded, and the period over which funding is guaranteed?|No||
-|16\.3) Do you make timely announcements of the deprecation of components, APIs, etc.?|No||
+|16\.3) Do you make timely announcements of the deprecation of components, APIs, etc.?|NO||
 
 
 
