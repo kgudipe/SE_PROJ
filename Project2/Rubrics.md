@@ -115,7 +115,7 @@ Project Name: Movie Recommender
 |15\.3) Does your website and documentation clearly state the licence of your software?|NO||
 |15\.4) Is your software released under an open source licence?|NO||
 |15\.5) Is your software released under an OSI-approved open-source licence?|NO||
-|15\.6) Does each of your source code files include a licence header?|No||
+|15\.6) Does each of your source code files include a licence header?|NO||
 |15\.7) Do you have a recommended citation for your software?|NO||
 |Q16 - Your plans for the future|||
 |16\.1) Does your website or documentation include a project roadmap (a list of project and development milestones for the next 3, 6 and 12 months)?|NO||
