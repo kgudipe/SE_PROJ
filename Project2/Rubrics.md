@@ -37,7 +37,7 @@ Project Name: Movie Recommender
 |Short release cycles|3|[Graphs](https://github.com/kgudipe/SE_PROJ/graphs/contributors)|
 |Q1 - What your software does|||
 |1\.1) Does your website and documentation provide a clear, high-level overview of your software?|<p>                             YES</p>||
-|1\.2) Does your website and documentation clearly describe the type of user who should use your software?|<p>**           </p><p>`                         `YES</p>||
+|1\.2) Does your website and documentation clearly describe the type of user who should use your software?|<p>          YES</p>||
 |1\.3) Do you publish case studies to show how your software has been used by yourself and others?|<p></p><p>**                         NO</p>||
 |Q2 - Your project's and software's identity|||
 |2\.1) Is the name of your project/software unique?|**                         NO||
