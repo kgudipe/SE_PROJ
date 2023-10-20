@@ -118,7 +118,7 @@ Project Name: Movie Recommender
 |15\.6) Does each of your source code files include a licence header?|No||
 |15\.7) Do you have a recommended citation for your software?|No||
 |Q16 - Your plans for the future|||
-|16\.1) Does your website or documentation include a project roadmap (a list of project and development milestones for the next 3, 6 and 12 months)?|Yes||
+|16\.1) Does your website or documentation include a project roadmap (a list of project and development milestones for the next 3, 6 and 12 months)?|No||
 |16\.2) Does your website or documentation describe how your project is funded, and the period over which funding is guaranteed?|Yes||
 |16\.3) Do you make timely announcements of the deprecation of components, APIs, etc.?|Yes||
 
