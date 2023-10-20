@@ -58,6 +58,38 @@ Make sure you taste your own medicine first and take into account other peoples 
 
 
 ### What's New
+Navigation Bar Improvements:
+
+Customizable UI introduced for a better user experience.
+Seamless navigation between the home page and genre selections.
+Genre dropdown includes: Action, Comedy, Thriller, Adventure, Romance, Science Fiction, Fantasy, and Crime.
+
+
+Year-wise Movie Sorting and Listing:
+
+Users can sort movies based on their release years.
+Updated dataset comprises 9,000 movies up to 2018.
+Genre-based movie listings enhanced with a pagination feature.
+
+
+Advanced Recommendation System:
+
+Integration of item-item based collaborative filtering with employed cosine similarity to refine recommendations.
+The system is now more optimized to showcase only the top 10 movie recommendations.
+
+
+Improved Search Capabilities:
+
+AJAX requests have been minimized by:
+Introducing a slight delay before search activation.
+Implementing a minimum character length of 1 for search triggers.
+Search results enhanced with a "remove" functionality for user flexibility.
+
+
+Optimized Genre Processing:
+
+Transitioned from sequential genre processing to vectorized operations using pandas.
+Achieved a significant 50% speedup in genre processing times.
 
 
 ### Documentation 📚
