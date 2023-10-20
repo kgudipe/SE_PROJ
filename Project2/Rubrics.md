@@ -20,7 +20,7 @@ Project Name: Movie Recommender
 |Docs: short video, animated, hosted on your repo. That convinces people why they want to work on your code.|3|[ReadMe](https://github.com/kgudipe/SE_PROJ/blob/main/Project2/README.md)|
 |Use of version control tools|3|[Github](https://github.com/kgudipe/SE_PROJ/blob/main/Project2/README.md)|
 |Use of style checkers|3|[Style Checkers](https://github.com/kgudipe/SE_PROJ/tree/main/Project2/test)|
-|Use of code formatters.|2|Cannot find code formatters|
+|Use of code formatters.|3|autopep8| black |
 |Use of syntax checkers.|3|[Syntax Checkers](https://github.com/git-ankit/MovieRecommender/blob/master/.coveralls.yml)|
 |Use of code coverage|3|[Git Badges](https://github.com/kgudipe/SE_PROJ/blob/main/Project2/README.md)|
 |Other automated analysis tools|2|No other automated analysis tools|
