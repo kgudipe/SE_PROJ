@@ -91,7 +91,7 @@ Project Name: Movie Recommender
 |11\.8) Do you have tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful?|YES||
 |Q12 - How you test your software|||
 |12\.1) Do you have an automated test suite for your software?|No||
-|12\.2) Do you have a framework to periodically (e.g. nightly) run your tests on the latest version of the source code?|Yes||
+|12\.2) Do you have a framework to periodically (e.g. nightly) run your tests on the latest version of the source code?|No||
 |12\.3) Do you use continuous integration, automatically running tests whenever changes are made to your source code?|NO||
 |12\.4) Are your test results publicly visible?|NO||
 |12\.5) Are all manually-run tests documented?|YES||
