@@ -18,7 +18,7 @@
 
 ## Code of Conduct:
 
-* Please go through the [Code of Conduct](https://github.com/git-ankit/MovieRecommender/blob/master/CODE_OF_CONDUCT.md) before you begin contributing.
+* Please go through the [Code of Conduct](https://github.com/kgudipe/SE_PROJ/Project2/CODE_OF_CONDUCT.md) before you begin contributing.
 
 ## Pull Request Submission Guidelines
 
