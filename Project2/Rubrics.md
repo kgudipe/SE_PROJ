@@ -45,7 +45,7 @@ Project Name: Movie Recommender
 |Q3 - Availability of your software|||
 |3\.1) Is your software available as a package that can be deployed without building it?|NO||
 |3\.2) Is your software available for free?|YES||
-|3\.3) Is your source code publicly available to download, either as a downloadable bundle or via access to a source code repository?|<p>                         </p><p>`                          `YES</p>||
+|3\.3) Is your source code publicly available to download, either as a downloadable bundle or via access to a source code repository?|<p>                         </p><p>YES</p>||
 |3\.4) Is your software hosted in an established, third-party repository likeGitHub ([https://github.com](https://github.com/)), BitBucket ([https://bitbucket.org](https://bitbucket.org/)),LaunchPad ([https://launchpad.net](https://launchpad.net/)) orSourceForge ([https://sourceforge.net](https://sourceforge.net/))?|<p></p><p></p><p>`                           `YES</p><p></p>||
 |Q4 - Your software's documentation|||
 |` `4.1) Is your documentation clearly available on your website or within your software?|YES||
