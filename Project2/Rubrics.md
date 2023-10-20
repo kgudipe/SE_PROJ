@@ -41,7 +41,7 @@ Project Name: Movie Recommender
 |1\.3) Do you publish case studies to show how your software has been used by yourself and others?|<p></p><p>                         NO</p>||
 |Q2 - Your project's and software's identity|||
 |2\.1) Is the name of your project/software unique?|                         NO||
-|2\.2) Is your project/software name free from trademark violations?|`                         `NO||
+|2\.2) Is your project/software name free from trademark violations?|NO||
 |Q3 - Availability of your software|||
 |3\.1) Is your software available as a package that can be deployed without building it?|`                         `NO||
 |3\.2) Is your software available for free?|`                          `YES||
