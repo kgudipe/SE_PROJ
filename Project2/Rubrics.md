@@ -92,7 +92,7 @@ Project Name: Movie Recommender
 |Q12 - How you test your software|||
 |12\.1) Do you have an automated test suite for your software?|YES||
 |12\.2) Do you have a framework to periodically (e.g. nightly) run your tests on the latest version of the source code?|NO||
-|12\.3) Do you use continuous integration, automatically running tests whenever changes are made to your source code?|NO||
+|12\.3) Do you use continuous integration, automatically running tests whenever changes are made to your source code?|YES||
 |12\.4) Are your test results publicly visible?|NO||
 |12\.5) Are all manually-run tests documented?|YES||
 |Q13 - How you engage with your community|||
