@@ -23,7 +23,7 @@ Project Name: Movie Recommender
 |Use of code formatters.|2|Cannot find code formatters|
 |Use of syntax checkers.|3|[Syntax Checkers](https://github.com/git-ankit/MovieRecommender/blob/master/.coveralls.yml)|
 |Use of code coverage|3|[Git Badges](https://github.com/kgudipe/SE_PROJ/blob/main/Project2/README.md)|
-|Other automated analysis tools|2|config files in GH|
+|Other automated analysis tools|2|No other automated analysis tools|
 |Test cases exist|3|[CodeCov](https://github.com/kgudipe/SE_PROJ/tree/main/Project2/test)|
 |Test cases are routinely executed|3| <br>[File1](https://github.com/kgudipe/SE_PROJ/tree/main/Project2/test)|
 |The files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|3|[CONTRIBUTING.md](https://github.com/kgudipe/SE_PROJ/blob/main/Project2/CONTRIBUTING.md)|
