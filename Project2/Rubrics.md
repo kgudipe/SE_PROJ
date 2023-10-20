@@ -96,7 +96,7 @@ Project Name: Movie Recommender
 |12\.4) Are your test results publicly visible?|NO||
 |12\.5) Are all manually-run tests documented?|YES||
 |Q13 - How you engage with your community|||
-|<p>13\.1) Does your project have resources (e.g. blog, Twitter, RSS feed, Facebook page, wiki, mailing list) that are regularly updated with information about your software?</p><p>e.g. release announcements, publications, workshops, conference presentations</p><p></p>|` `NO||
+|<p>13\.1) Does your project have resources (e.g. blog, Twitter, RSS feed, Facebook page, wiki, mailing list) that are regularly updated with information about your software?</p><p>e.g. release announcements, publications, workshops, conference presentations</p><p></p>|NO||
 |13\.2)  Does your website state how many projects and users are associated with your project?|NO||
 |13\.3) Do you provide success stories on your website?|NO||
 |13\.4) Do you list your important partners and collaborators on your website?|YES||
