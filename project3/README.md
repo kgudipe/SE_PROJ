@@ -13,10 +13,10 @@ Imagine each movie is a star, and cosine similarity is like a cool trick to see 
 ### Architecture of the Recommendation System 🏗️
 
 ### What's New? 🤔
+**🔄 Evolution Snapshot: Old vs. New**
+- **Static to Dynamic Magic:** Old system had static movie details - a fixed menu with limited movie details. But now, with dynamic web scraping, we're serving real-time details like titles, cast details, genres, and eye-catching posters. So even the latest movies released are incorporated into the recommendation model. It's not just a movie; it's a dynamic experience! 🍿✨
 
-- **Static to Dynamic Magic:** Old system had static movie details - a fixed menu with limited movie details. But now, with dynamic web scraping, we're serving real-time details like titles, genres, and eye-catching posters. So even the latest movies released are incorporated into the recommendation model. It's not just a movie; it's a dynamic experience! 🍿✨
-
-- **Predictable to Feel-Good Feels:** Before, we just knew your movie likes. Now, with sentiment analysis, we feel them too! Reviews are no longer just words; they're a mix of positive and negative vibes.So now instead of taking a list of movies from the user and suggesting another list of similar movies, we now present to you the most similar movies that you would like based on your movie selection and how other people feel about it (using sentiment analysis). Your movie night just got a mood boost! 🎭👍
+- **Predictable to Feel-Good Feels:** Before, we just knew your movie likes. Now, with sentiment analysis, we feel them too! Reviews are no longer just words; they're a mix of positive and negative vibes. So now instead of taking a list of movies from the user and suggesting another list of similar movies, we now present to you the most similar movies that you would like based on your movie selection and how other people feel about it (using sentiment analysis). Your movie night just got a mood boost! 🎭👍
 
 - **Interface Glow-Up:** Say goodbye to the old look; we've given it a complete makeover! The user interface is now a captivating wonderland of movie details, cast revelations, and user reviews. One can even get details of the cast like when their birthday and place of birth is, if you are curious, and also a biography explaining their jouney in the movie industry. It's not just watching; it's a visual feast! 🎨👀
 
