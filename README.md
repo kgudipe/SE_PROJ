@@ -3,7 +3,7 @@
 ![Framework](https://img.shields.io/badge/Framework-Flask-red)
 ![Frontend](https://img.shields.io/badge/Frontend-HTML/CSS/JS-green)
 ![API](https://img.shields.io/badge/API-TMDB-fcba03)
-[![Coverage](https://img.shields.io/badge/coverage-99%25-brightgreen)]
+[![Coverage](https://img.shields.io/badge/coverage-99%25-brightgreen)
 
 This Movie Recommender System is like having a movie buddy who knows your taste super well. It looks at movie info from TMDB and even checks out what people say on IMDB. Then, it uses something called cosine similarity along with the sentiment analysis to match you with movies you'll love.
 
