@@ -12,6 +12,8 @@ Imagine each movie is a star, and cosine similarity is like a cool trick to see 
 
 
 ### Architecture of the Recommendation System 🏗️
+![Alt Text](Recommendation_Architecture.png)
+
 
 ### What's New? 🤔
 **🔄 Evolution Snapshot: Old vs. New**
