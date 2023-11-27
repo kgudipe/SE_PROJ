@@ -4,12 +4,12 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 
-
+#Loads movie metadata from a CSV file named "movies_metadata.csv" and returns the specified number of rows (movie_length).
 def get_data(movie_length):
     metadata = pd.read_csv("movies_metadata.csv", low_memory=False)
     return metadata[:movie_length]
 
-
+#Calculates the cosine similarity matrix using the TF-IDF matrix to determine similarities between movies based on their overviews.
 def compute_tfidfmatrix(metadata):
     # Define a TF-IDF Vectorizer Object. Remove all english stop words such as 'the', 'a'
     tfidf = TfidfVectorizer(stop_words="english")
@@ -23,7 +23,7 @@ def compute_tfidfmatrix(metadata):
     cosine_similarity = linear_kernel(tfidf_matrix, tfidf_matrix)
     np.savez("cosine_similarity_10k", matrix=cosine_similarity)
 
-
+#Finds the index of the movie in the metadata and obtains similarity scores for all movies relative to it.
 def get_recommendations(title, indices, cosine_sim):
     # Get the index of the movie that matches the title
 
