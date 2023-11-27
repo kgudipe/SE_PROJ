@@ -336,3 +336,28 @@ h6 {
 	display: none;
 	color: white;
 }
+
+.lightboxContainer {
+	position:relative;
+	display:inline-block;
+  }
+   
+  .lightboxContainer:after {
+	content:url("../static/redplay.png");
+	z-index:999;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-1px;
+	margin-top:-25px;
+	opacity:0.8;
+  }
+   
+  .lightboxContainer:hover:after {
+	opacity:1;
+  }
+   
+  .lightboxContainer img {
+	width: 250px;
+  }
+  
