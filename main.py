@@ -32,6 +32,16 @@ def convert_to_list_num(my_list):
 def generate_tfidf_matrix(metadata):
     # Create a TF-IDF Vectorizer Object and exclude common English stop words like 'the' and 'a'
     tfidf = TfidfVectorizer(stop_words="english")
+   
+    # Replace NaN with an empty string
+    metadata["overview"] = metadata["overview"].fillna("")
+
+    # Construct the required TF-IDF matrix by fitting and transforming the data
+    tfidf_matrix = tfidf.fit_transform(metadata["overview"])
+    
+    cosine_similarity = linear_kernel(tfidf_matrix, tfidf_matrix)
+    np.savez("cosine_similarity_10k", matrix=cosine_similarity)
+    
 
 def get_suggestions():
     data = pd.read_csv('main_data.csv')
