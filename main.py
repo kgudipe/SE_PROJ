@@ -12,7 +12,8 @@ import pickle
 import requests
 from datetime import date, datetime
 
-# load the nlp model and tfidf vectorizer from disk
+# Loading the trained machine learning models (nlp_model.pkl and tranform.pkl) using pickle.load and tfidf vectorizer from disk for sentiment anlalysis of the movie reviews
+
 filename = 'nlp_model.pkl'
 clf = pickle.load(open(filename, 'rb'))
 vectorizer = pickle.load(open('tranform.pkl','rb'))
