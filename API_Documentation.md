@@ -43,3 +43,18 @@ The base URL for the API is: `http://localhost:5000/`
 - **Response:**
   - **Status Code:** 200 OK
   - **Content Type:** text/html
+
+### 3. Get Movie Recommendations
+
+- **Endpoint:** `POST /recommend`
+- **Description:** Generates movie recommendations based on user input and provides detailed movie information.
+- **Request:** `POST /recommend`
+- **Form Data:**
+  - title: Movie title
+  - cast_ids: Comma-separated list of cast IDs
+  - cast_names: Comma-separated list of cast names
+  - cast_chars: Comma-separated list of cast characters
+  - ... (other form data fields)
+- **Response:** 
+  - **Status Code:** 200 OK
+  - **Content Type:** text/html
