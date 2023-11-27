@@ -10,7 +10,7 @@ The base URL for the API is: `http://localhost:5000/`
 
 ## Endpoints
 
-### 1. Get Autocomplete Suggestions
+### 1. Home Page - Get Autocomplete Suggestions
 
 - **Endpoint:** `GET /home`
 - **Description:** Returns a list of movie title suggestions for autocomplete.
@@ -58,3 +58,7 @@ The base URL for the API is: `http://localhost:5000/`
 - **Response:** 
   - **Status Code:** 200 OK
   - **Content Type:** text/html
+
+
+
+
