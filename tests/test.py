@@ -15,6 +15,10 @@ class TestMain(unittest.TestCase):
         suggestions = get_suggestions()
         self.assertTrue(isinstance(suggestions, list))
 
+    def test_convert_to_list(self):
+        result = convert_to_list('["abc", "def"]')
+        self.assertEqual(result, ["abc", "def"])
+    
     def test_convert_to_list_num(self):
         result = convert_to_list_num("[1, 2, 3]")
         self.assertEqual(result, [1, 2, 3])
