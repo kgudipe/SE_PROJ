@@ -38,6 +38,6 @@ The base URL for the API is: `http://localhost:5000/`
         "release_date": "2022-01-01",
         "id": 123
       },
-      // ... more movie objects
+      ...
     ]
   }
