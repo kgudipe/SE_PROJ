@@ -35,11 +35,22 @@
   <div id="mycontent">
     <div id="mcontent">
       <div class="poster-lg">
-        <img class="poster" style="border-radius: 40px;margin-left: 90px;" height="400" width="250" src={{poster}}>
+        <a class="wplightbox" href="https://www.wonderplugin.com/wp-content/uploads/2020/08/WPcarousel.mp4">
+          <div class="lightboxContainer">
+            <img class="poster" style="border-radius: 40px;margin-left: 90px;" height="400" width="250" src={{poster}}>
+          </div>
+        </a>
       </div>
       <div class="poster-sm text-center">
-        <img class="poster" style="border-radius: 40px;margin-bottom: 5%;" height="400" width="250" src={{poster}}>
+        <!-- <img class="poster" style="border-radius: 40px;margin-bottom: 5%;" height="400" width="250" src={{poster}}>
+        <button>Click Me</button> -->
+        <a class="wplightbox" href="https://www.wonderplugin.com/wp-content/uploads/2020/08/WPcarousel.mp4">
+          <div class="lightboxContainer">
+            <img class="poster" style="border-radius: 40px;margin-bottom: 5%;" height="400" width="250" src={{poster}}>
+          </div>
+        </a>
       </div>
+        
       <div id="details">
         <br/>
         <h6 id="title" style="color:white;">TITLE: &nbsp;{{title}}</h6>
@@ -126,23 +137,23 @@
                 </tr>
             </thead>
     
-            <tbody>
-    {% for review, status in reviews.items() if not reviews.hidden %}
-            <tr style="background-color: transparent;">
-            <td>{{review}}</td>
-            <td>
-              <center>
-                {{status}} : 
-                {% if status =='Positive' %}
-                  &#128515;
-                {% else %}
-                  &#128534;
-                {% endif %}
-              </center>
-            </td>
-            </tr>
-          {% endfor %}
-          </tbody>
+          <tbody>
+	    {% for review, status in reviews.items() if not reviews.hidden %}
+    	        <tr style="background-color: transparent;">
+                <td>{{review}}</td>
+                <td>
+                  <center>
+                    {{status}} : 
+                    {% if status =='Positive' %}
+                      &#128515;
+                    {% else %}
+                      &#128534;
+                    {% endif %}
+                  </center>
+                </td>
+            	</tr>
+      	    {% endfor %}
+    		  </tbody>
  		    </table>
      </div>
 
@@ -186,7 +197,7 @@
                 <button class="card-btn btn btn-primary"> Click Me </button>
               </figcaption>
             </div>
-            <div class="card-body"> 
+            <div class="card-body">
               <h5 class="card-title" style="font-family: 'Rowdies', cursive;font-size: 17px;">{{details[0]|upper}}</h5>
             </div>
           </div>
@@ -203,7 +214,27 @@
         <center><h2 style="font-family: 'Rowdies', cursive;">Multiple matches found</h5></center>
       </div>
 
-      
+      <div class="movie-content">
+        {% for poster, details in movie_cards.items() if not movie_cards.hidden %}
+          <div class="card" style="width: 14rem;" title="{{details[1]}}" onclick="recommendcard({{details[4]}})">
+            <div class="imghvr">
+              <img class="card-img-top" height="360" width="240" alt="{{details[0]}} - poster" src={{poster}}>
+              <div class="card-img-overlay" >
+                <span class="card-text" style="font-size:15px;background: #000000b8;color:white;padding:2px 5px;border-radius: 10px;"><span class="fa fa-star checked">&nbsp; {{details[2]}}/10</span></span>
+              </div>
+              <div class=".card-img-overlay" style="position: relative;">
+                <span class="card-text" style="font-size:15px;position:absolute;bottom:20px;left:15px;background: #000000b8;color:white;padding: 5px;border-radius: 10px;">{{details[3]}}</span>
+              </div>
+              <figcaption class="fig">
+                <button class="card-btn btn btn-primary"> Click Me </button>
+              </figcaption>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title" style="font-family: 'Rowdies', cursive;font-size: 17px;">{{details[0]|upper}}</h5>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
       </div>
     {% endif %}
   {% endif %}
