@@ -126,7 +126,23 @@
                 </tr>
             </thead>
     
-          
+            <tbody>
+    {% for review, status in reviews.items() if not reviews.hidden %}
+            <tr style="background-color: transparent;">
+            <td>{{review}}</td>
+            <td>
+              <center>
+                {{status}} : 
+                {% if status =='Positive' %}
+                  &#128515;
+                {% else %}
+                  &#128534;
+                {% endif %}
+              </center>
+            </td>
+            </tr>
+          {% endfor %}
+          </tbody>
  		    </table>
      </div>
 
