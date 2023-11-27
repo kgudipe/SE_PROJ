@@ -11,6 +11,9 @@ warnings.filterwarnings("ignore")
 
 class TestMain(unittest.TestCase):
 
+    def test_get_suggestions(self):
+        suggestions = get_suggestions()
+        self.assertTrue(isinstance(suggestions, list))
 
     def test_convert_to_list_num(self):
         result = convert_to_list_num("[1, 2, 3]")
