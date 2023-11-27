@@ -3,6 +3,8 @@ import pandas as pd
 from flask import Flask, render_template, request
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
 import json
 import bs4 as bs
 import urllib.request
@@ -10,12 +12,14 @@ import pickle
 import requests
 from datetime import date, datetime
 
-# load the nlp model and tfidf vectorizer from disk
+# Loading the trained machine learning models (nlp_model.pkl and tranform.pkl) using pickle.load and tfidf vectorizer from disk for sentiment anlalysis of the movie reviews
+
 filename = 'nlp_model.pkl'
 clf = pickle.load(open(filename, 'rb'))
 vectorizer = pickle.load(open('tranform.pkl','rb'))
     
-# converting list of string to list (eg. "["abc","def"]" to ["abc","def"])
+
+# Below functions are defined to convert strings to lists, generate a TF-IDF matrix, and get movie suggestions from a CSV file (main_data.csv).
 def convert_to_list(my_list):
     my_list = my_list.split('","')
     my_list[0] = my_list[0].replace('["','')
@@ -29,9 +33,29 @@ def convert_to_list_num(my_list):
     my_list[-1] = my_list[-1].replace("]","")
     return my_list
 
+def generate_tfidf_matrix(metadata):
+    # Create a TF-IDF Vectorizer Object and exclude common English stop words like 'the' and 'a'
+    tfidf = TfidfVectorizer(stop_words="english")
+   
+    # Replace NaN with an empty string
+    metadata["overview"] = metadata["overview"].fillna("")
+
+    # Construct the required TF-IDF matrix by fitting and transforming the data
+    tfidf_matrix = tfidf.fit_transform(metadata["overview"])
+    
+    cosine_similarity = linear_kernel(tfidf_matrix, tfidf_matrix)
+    np.savez("cosine_similarity_10k", matrix=cosine_similarity)
+    
+
 def get_suggestions():
     data = pd.read_csv('main_data.csv')
     return list(data['movie_title'].str.capitalize())
+    
+
+#Flask routes are set up for different endpoints:
+#a)Home renders an HTML template (home.html) with movie suggestions.
+#b)populate-matches handles AJAX requests and returns movie recommendations.
+#c)recommend processes user inputs, fetches movie data, and reviews from IMDb, and renders a recommendation page (recommend.html) with movie details and reviews along with sentiments.    
 
 app = Flask(__name__)
 
@@ -114,7 +138,7 @@ def recommend():
     casts = {cast_names[i]:[cast_ids[i], cast_chars[i], cast_profiles[i]] for i in range(len(cast_profiles))}
 
     cast_details = {cast_names[i]:[cast_ids[i], cast_profiles[i], cast_bdays[i], cast_places[i], cast_bios[i]] for i in range(len(cast_places))}
-
+    
     if(imdb_id != ""):
         # web scraping to get user reviews from IMDB site
         sauce = urllib.request.urlopen('https://www.imdb.com/title/{}/reviews?ref_=tt_ov_rt'.format(imdb_id)).read()
@@ -150,7 +174,7 @@ def recommend():
     else:
         return render_template('recommend.html',title=title,poster=poster,overview=overview,vote_average=vote_average,
             vote_count=vote_count,release_date=release_date,movie_rel_date="",curr_date="",runtime=runtime,status=status,genres=genres,movie_cards=movie_cards,reviews="",casts=casts,cast_details=cast_details)
-
+            #generate_tfidf_matrix(metadata)
 
 if __name__ == '__main__':
     app.run(debug=True)
