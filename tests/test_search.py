@@ -18,6 +18,11 @@ class TestSearch(unittest.TestCase):
         expected = ['Star Wars: Episode IV - A New Hope (1977)', 'Star Wars: Episode V - The Empire Strikes Back (1980)', 'Star Wars: Episode VI - Return of the Jedi (1983)', 'Star Trek (2009)']
         self.assertEqual(result, expected)
 
+    def test_results(self):
+        result = self.search.results("Star")
+        expected = ['Star Wars: Episode IV - A New Hope (1977)', 'Star Wars: Episode V - The Empire Strikes Back (1980)', 'Star Wars: Episode VI - Return of the Jedi (1983)', 'Star Trek (2009)']
+        self.assertEqual(result, expected)
+
 
 if __name__ == '__main__':
     unittest.main()
