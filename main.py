@@ -18,7 +18,8 @@ filename = 'nlp_model.pkl'
 clf = pickle.load(open(filename, 'rb'))
 vectorizer = pickle.load(open('tranform.pkl','rb'))
     
-# converting list of string to list (eg. "["abc","def"]" to ["abc","def"])
+
+# Below functions are defined to convert strings to lists, generate a TF-IDF matrix, and get movie suggestions from a CSV file (main_data.csv).
 def convert_to_list(my_list):
     my_list = my_list.split('","')
     my_list[0] = my_list[0].replace('["','')
