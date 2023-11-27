@@ -8,6 +8,9 @@ project_dir = os.path.dirname(code_dir)
 
 warnings.filterwarnings("ignore")
 
+#Computes a recommendation score for each movie by taking a dot product between the user profile and movie genres, normalizing it by the sum of the user profile.
+#Sorts movies based on these recommendation scores in descending order.
+#Returns a list of movie titles as recommendations based on the calculated scores, 
 
 def recommendForNewUser(user_rating):
     ratings = pd.read_csv(project_dir + "/data/ratings.csv")
