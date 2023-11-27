@@ -3,6 +3,8 @@ import pandas as pd
 from flask import Flask, render_template, request
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
 import json
 import bs4 as bs
 import urllib.request
@@ -28,6 +30,20 @@ def convert_to_list_num(my_list):
     my_list[0] = my_list[0].replace("[","")
     my_list[-1] = my_list[-1].replace("]","")
     return my_list
+
+def generate_tfidf_matrix(metadata):
+    # Create a TF-IDF Vectorizer Object and exclude common English stop words like 'the' and 'a'
+    tfidf = TfidfVectorizer(stop_words="english")
+   
+    # Replace NaN with an empty string
+    metadata["overview"] = metadata["overview"].fillna("")
+
+    # Construct the required TF-IDF matrix by fitting and transforming the data
+    tfidf_matrix = tfidf.fit_transform(metadata["overview"])
+    
+    cosine_similarity = linear_kernel(tfidf_matrix, tfidf_matrix)
+    np.savez("cosine_similarity_10k", matrix=cosine_similarity)
+    
 
 def get_suggestions():
     data = pd.read_csv('main_data.csv')
@@ -114,7 +130,7 @@ def recommend():
     casts = {cast_names[i]:[cast_ids[i], cast_chars[i], cast_profiles[i]] for i in range(len(cast_profiles))}
 
     cast_details = {cast_names[i]:[cast_ids[i], cast_profiles[i], cast_bdays[i], cast_places[i], cast_bios[i]] for i in range(len(cast_places))}
-
+    
     if(imdb_id != ""):
         # web scraping to get user reviews from IMDB site
         sauce = urllib.request.urlopen('https://www.imdb.com/title/{}/reviews?ref_=tt_ov_rt'.format(imdb_id)).read()
@@ -150,7 +166,7 @@ def recommend():
     else:
         return render_template('recommend.html',title=title,poster=poster,overview=overview,vote_average=vote_average,
             vote_count=vote_count,release_date=release_date,movie_rel_date="",curr_date="",runtime=runtime,status=status,genres=genres,movie_cards=movie_cards,reviews="",casts=casts,cast_details=cast_details)
-
+            #generate_tfidf_matrix(metadata)
 
 if __name__ == '__main__':
     app.run(debug=True)
