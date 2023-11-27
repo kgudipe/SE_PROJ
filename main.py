@@ -50,6 +50,12 @@ def generate_tfidf_matrix(metadata):
 def get_suggestions():
     data = pd.read_csv('main_data.csv')
     return list(data['movie_title'].str.capitalize())
+    
+
+#Flask routes are set up for different endpoints:
+#a)Home renders an HTML template (home.html) with movie suggestions.
+#b)populate-matches handles AJAX requests and returns movie recommendations.
+#c)recommend processes user inputs, fetches movie data, and reviews from IMDb, and renders a recommendation page (recommend.html) with movie details and reviews along with sentiments.    
 
 app = Flask(__name__)
 
