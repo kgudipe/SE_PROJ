@@ -12,12 +12,14 @@ import pickle
 import requests
 from datetime import date, datetime
 
-# load the nlp model and tfidf vectorizer from disk
+# Loading the trained machine learning models (nlp_model.pkl and tranform.pkl) using pickle.load and tfidf vectorizer from disk for sentiment anlalysis of the movie reviews
+
 filename = 'nlp_model.pkl'
 clf = pickle.load(open(filename, 'rb'))
 vectorizer = pickle.load(open('tranform.pkl','rb'))
     
-# converting list of string to list (eg. "["abc","def"]" to ["abc","def"])
+
+# Below functions are defined to convert strings to lists, generate a TF-IDF matrix, and get movie suggestions from a CSV file (main_data.csv).
 def convert_to_list(my_list):
     my_list = my_list.split('","')
     my_list[0] = my_list[0].replace('["','')
@@ -48,6 +50,12 @@ def generate_tfidf_matrix(metadata):
 def get_suggestions():
     data = pd.read_csv('main_data.csv')
     return list(data['movie_title'].str.capitalize())
+    
+
+#Flask routes are set up for different endpoints:
+#a)Home renders an HTML template (home.html) with movie suggestions.
+#b)populate-matches handles AJAX requests and returns movie recommendations.
+#c)recommend processes user inputs, fetches movie data, and reviews from IMDb, and renders a recommendation page (recommend.html) with movie details and reviews along with sentiments.    
 
 app = Flask(__name__)
 
