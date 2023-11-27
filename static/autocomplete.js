@@ -5,7 +5,7 @@ new autoComplete({
     selector: "#autoComplete",           // Input field selector              | (Optional)
     threshold: 2,                        // Min. Chars length to start Engine | (Optional)
     debounce: 100,                       // Post duration for engine to start | (Optional)
-    searchEngine: "strict",              // Search Engine type/mode           | (Optional)
+    searchEngine:  "strict",              // Search Engine type/mode           | (Optional)
     resultsList: {                       // Rendered results list object      | (Optional)
         render: true,
         container: source => {
@@ -33,4 +33,5 @@ new autoComplete({
     onSelection: feedback => {             // Action script onSelection event | (Optional)
         document.getElementById('autoComplete').value = feedback.selection.value;
     }
+
 });

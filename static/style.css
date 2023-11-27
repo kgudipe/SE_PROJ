@@ -73,6 +73,93 @@ social-icons/* width */
 	font-size: 15px !important;
 }
 
+h1 {
+    /* font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #00FFFF;
+    font-weight: bold; */
+    margin-top: 30px;
+    text-shadow: #000000 0px 0px 13px;
+	font-size:45px;
+	text-align:center; 
+	line-height:1.5em; 
+	padding-bottom:45px; 
+	font-family:"Playfair Display", serif; 
+	text-transform:uppercase;
+	letter-spacing: 2px; 
+	color: #00BFFF;
+	font-weight: bold;
+ }
+
+ .btn-primary{
+	background-color: #00BFFF;
+ }
+
+.github-corner:hover .octo-arm {
+  	animation: octocat-wave 560ms ease-in-out;
+}
+
+.fa-arrow-up {
+	font-size: 1.5em;
+	color: #ffffff;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    padding: 10px;
+	border-radius: 50%;
+	float: right;
+    bottom: 25px;
+    position: relative;
+}
+
+.fa-arrow-up:hover {
+	cursor: pointer;
+}
+
+.app-title:hover {
+	cursor: pointer;
+}
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0)
+  }
+
+  20%,
+  60% {
+    transform: rotate(-25deg)
+  }
+
+  40%,
+  80% {
+    transform: rotate(10deg)
+  }
+}
+
+#autoComplete {
+  	background-position: 98% ;
+  	border: 0.05rem solid #00d4ff;
+	caret-color: #00d4ff;
+	background-image: url("../static/transparent-magnifying-glass-blue.jpg") !important;
+	color: #00d4ff !important;
+}
+#autoComplete::selection {
+	background-image: url("../static/transparent-magnifying-glass-blue.jpg") !important;
+	color: transparent !important;
+}
+
+#autoComplete.movie.form-control::placeholder{
+	color: #00d4ff !important;
+	content: 'Enter the Movie Name'!important;
+	opacity: 0.5 !important;
+	font-size:medium;
+}
+#name {
+	color: white;
+	padding: 1px;
+}
+
+h6 {
+    margin-bottom: 20px;  
+}
 
 @media only screen and (max-width: 650px) {
     #mcontent {
