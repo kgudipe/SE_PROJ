@@ -29,6 +29,10 @@ def convert_to_list_num(my_list):
     my_list[-1] = my_list[-1].replace("]","")
     return my_list
 
+def generate_tfidf_matrix(metadata):
+    # Create a TF-IDF Vectorizer Object and exclude common English stop words like 'the' and 'a'
+    tfidf = TfidfVectorizer(stop_words="english")
+
 def get_suggestions():
     data = pd.read_csv('main_data.csv')
     return list(data['movie_title'].str.capitalize())
