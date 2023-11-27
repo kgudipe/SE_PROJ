@@ -6,7 +6,7 @@ from datetime import datetime
 sys.path.append("../")
 from main import get_suggestions, convert_to_list, convert_to_list_num, app
 
-
+warnings.filterwarnings("ignore")
 
 
 class TestMain(unittest.TestCase):
