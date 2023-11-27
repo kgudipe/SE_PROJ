@@ -59,6 +59,43 @@ The base URL for the API is: `http://localhost:5000/`
   - **Status Code:** 200 OK
   - **Content Type:** text/html
 
+# search.py Code Documentation
 
+This documentation provides details about the `Search` class in the `search.py` file.
 
+## Class: Search
 
+The `Search` class in `search.py` contains the following methods:
+
+### 1. startsWith(self, word)
+
+**Input:**
+- `word`: It is a string where users can write the name of the movie.
+
+**Output:**
+- Returns a list of movies that start with the given word.
+
+### 2. anywhere(self, word, visitedWords)
+
+**Input:**
+- `word`: It is a string where users can write the name of the movie.
+- `visitedWords`: A set (unordered hash-map) of movies that should not be part of the output.
+
+**Output:**
+- Returns a list of movies that have the input word anywhere in its title.
+
+### 3. results(self, word)
+
+**Input:**
+- `word`: It is a string where users can write the name of the movie.
+
+**Output:**
+- Returns a list of movies where the first few movies will be the ones that start with the input word, followed by the movies that have the input word anywhere in its title.
+
+### 4. resultsTop10(self, word)
+
+**Input:**
+- `word`: It is a string where users can write the name of the movie.
+
+**Output:**
+- Returns the first 10 results from the method `results`.
